@@ -11,9 +11,9 @@ fn main() -> anyhow::Result<()> {
     loop {
         led.set_high()?;
         // we are sleeping here to make sure the watchdog isn't triggered
-        FreeRtos::delay_ms(500);
+        FreeRtos::delay_ms(200);
 
         led.set_low()?;
-        FreeRtos::delay_ms(500);
+        FreeRtos::delay_ms(200);
     }
 }
